@@ -1,0 +1,330 @@
+{% extends 'base.html'  %}
+{% load static %}
+{% block body %}
+<body>
+   
+    <main>
+        <!-- banner area start -->
+        <section class="banner-area section-notch">
+            <div class="hero-bg-img slider-height d-flex align-items-center" 
+                     style="background-image: url(../../static/img/image13.jpg);">
+                <div class="banner-overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-8 col-md-10 content">
+                            <div class="banner-content">
+                                <h3 id="banner-content-text">A New Approach to</h3>
+                                <h2 class="Kids">Kids Education</h2>
+                                <p>We provide best solutions for a Clean Environment If you need any help in cleaning or maintenance.</p>
+                                <div class="banner-btn">
+                                    <a class="thm-btn thm-btn-2" href="./contact.html">Admissaion Now</a>
+                                    <a class="thm-btn" href="#classes">Our Classes</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner area end -->
+
+            <!-- feature area start -->
+            <section>
+                <div class="container pt-5 pb-5">
+                    <div class="section-title text-center">
+                        <h2>Welcome to Preciouskidddes</h2>
+                        <p>Here is what you can expect from a house cleaning from a Handy professional. Download the app to share further cleaning details and instructions!</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6">
+                            <div class="feature-item text-center mb-30">
+                                <div class="feature-shape">
+                                    <img src="{% static 'vendor/img/icon/c-icon1.png' %}" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <div class="feature-title">
+                                        <h3>Active Learning</h3>
+                                    </div>
+                                    <p>Since have been visonary relable sofware engnern partne have been and visionary</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6">
+                            <div class="feature-item text-center mb-30">
+                                <div class="feature-shape feature-shape-2">
+                                    <img src="{% static 'vendor/img/icon/c-icon2.png' %}" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <div class="feature-title feature-title-2">
+                                        <h3>Expert Teachers</h3>
+                                    </div>
+                                    <p>Since have been visonary relable sofware engnern partne have been and visionary</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6">
+                            <div class="feature-item text-center mb-30">
+                                <div class="feature-shape feature-shape-3">
+                                    <img src="{% static 'vendor/img/icon/c-icon3.png' %}" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <div class="feature-title feature-title-3">
+                                        <h3>Parents Day</h3>
+                                    </div>
+                                    <p>Since have been visonary relable sofware engnern partne have been and visionary</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6">
+                            <div class="feature-item text-center ">
+                                <div class="feature-shape feature-shape-4">
+                                    <img src="{% static 'vendor/img/icon/c-icon4.png' %}" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <div class="feature-title feature-title-4">
+                                        <h3>Music Lessons</h3>
+                                    </div>
+                                    <p>Since have been visonary relable sofware engnern partne have been and visionary</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- feature area end -->
+              
+             <!-- about area start -->
+             <section class=" section-notch">
+                <div class="container about-area mt-5">
+                    <div class="row">
+                      {% for i in about %}
+                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
+                            <div class="about-content pt-5 pb-5">
+                                <h2><a href="About" style="color:#00394F;">{{i.title}}</a> </h2>
+                                <p>{{i.description}}</p>
+                                <div class="about-btn">
+                                    <a class="thm-btn thm-btn-2" href="./contact.html">admission now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="about-img d-none d-lg-block">
+                                <img src="{{i.image.url}}" alt="">
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section> 
+            <!-- about area end -->
+
+
+            <!-- class area start -->
+            <section>
+                 <div class="container mt-5 mb-5">
+                    <div class="section-title text-center">
+                        <a href="#classes"><h2>Our Popular Classes</h2></a>
+                        <p>Here is what you can expect from a house cleaning from a Handy professional. Download the app to share further cleaning details and instructions!</p>
+                    </div>
+                   
+                    <div class="row">
+                       {% for i in class %}
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="class-item mb-30">
+                                <div class="class-img">
+                                    <img src="{{i.image.url}}" alt="class image">
+                                </div>
+                                <div class="class-content">
+                                    <a href=""><h4>{{i.title}}</h4></a>
+                                    <p>Class Time : 06:30 am - 1:00 pm</p>
+                                    <p>{{i.description}}</p>
+                                </div>
+                                <ul class="schedule">
+                                    <li>
+                                        <span>Class Size</span>
+                                        <span class="class-size">30 - 40</span>
+                                    </li>
+                                    <li>
+                                        <span>Years Old</span>
+                                        <span class="class-size class-size-2">1year - Above</span>
+                                    </li>
+                                    <li>
+                                        <span>Tution Fee</span>
+                                        <span class="class-size">$320.00</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                    
+                    <div class="row mt-3">
+                        <div class="col-xl-12">
+                            <div class="view-class text-center mt-30">
+                                <a class="thm-btn" href="classes.html">See More Classes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+            <!-- class area end -->
+
+            
+             <!-- Section Callout -->
+         <section id="callout" class="small-section  ">
+            <!-- Clouds background -->
+            <div class="hidden-xs">
+               <div class="cloud x1"></div>
+               <div class="cloud x2"></div>
+               <div class="cloud x3"></div>
+               <div class="cloud x4"></div>
+               <div class="cloud x5"></div>
+               <div class="cloud x6"></div>
+               <div class="cloud x7"></div>
+            </div>
+            <!-- /Clouds ends -->
+            <div class="container">
+               <!-- Animated Sun -->
+               <div class="sun hidden-sm hidden-xs">
+                  <div class="sun-face">
+                     <div class="sun-hlight"></div>
+                     <div class="sun-leye"></div>
+                     <div class="sun-reye"></div>
+                     <div class="sun-lred"></div>
+                     <div class="sun-rred"></div>
+                     <div class="sun-smile"></div>
+                  </div>
+                  <!-- Sun rays -->
+                  <div class="sun-anime">
+                     <div class="sun-ball"></div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                     <div class="sun-light"><b></b><s></s>
+                     </div>
+                  </div>
+               </div>
+               <!-- /Animated Sun -->
+               <div class="col-md-6 col-sm-6 text-center">
+                  <div class="well">
+                     <h3>Visit Our Daycare</h3>
+                     <p>Lotam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi Suspendisse a elementum anteu imperdiet et maecenas eu eros non nibh aliquet iaculis..</p>
+                     <div class="page-scroll">
+                        <!-- Button-->
+                        <a class="btn" href="#contact">Contact us</a>
+                     </div>
+                     <!-- /page-scroll -->
+                  </div>
+                  <!-- /well -->
+               </div>
+               <!-- /col-md-6 -->
+            </div>
+            <!-- /container-->
+         </section>
+         <!-- Section Ends-->
+
+             <!-- team area start -->
+              <section>
+                <div class="container mt-5 mb-5">
+                    <div class="section-title text-center">
+                        <h2><a href="#Teacher.html"></a> Meet Our Staffs</h2>
+                        <p>Here is what you can expect from a house cleaning from a Handy professional. Download the app to share further cleaning details and instructions!</p>
+                    </div>
+                    <div class="row">
+                      {% for i in staff %}
+                        <div class="col-xl-3 col-lg-3 col-md-6">
+                            <div class="single-team text-center mb-30">
+                                <div class="team-thumb">
+                                    <img src="{{i.image.url}}" alt="">
+                                    <div class="team-icon">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="team-info">
+                                  <h3>{{i.title}}</h3>
+                                  <span>{{i.description}}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                      {% endfor %}
+                    </div>
+                </div>
+             </section>
+            <!-- team area end -->
+
+         
+
+            <!-- portfolio area start -->
+            <section>
+                 <div class="container p-5 p-5">
+                    <div class="section-title section-title-3 text-center">
+                        <h2> Our School Gallery</h2>
+                        <p>Here is what you can expect from a house cleaning from a Handy professional. Download the app to share further cleaning details and instructions!</p>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <ul class="portfolio-menu">
+                                <li class="active" data-filter="*">see all</li>
+                                <li data-filter=".cat1">Branding</li>
+                                <li data-filter=".cat2">Creative</li>
+                                <li data-filter=".cat3">Illustration</li>
+                                <li data-filter=".cat4">Photoshgop</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row grid text-center">
+                      {% for i in gallery %}
+                        <div class="col-xl-4 col-lg-4 col-md-6 grid-item mb-30 cat3 cat4 cat2">
+                            <div class="portfolio-item">
+                                <div class="fortfolio-thumb">
+                                    <img src="{{i.image.url}}" alt="" height="250px">
+                                </div>
+                                <div class="portfolio-content">
+                                    <div class="content-view">
+                                        <a class="popup-image"  href=""><i class="icon fa fa-plus"></i></a>
+                                    </div>
+                                    <a href="#"><h3>{{i.title}}</h3></a>
+                                    <span>{{i.description}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+
+            <!-- portfolio area ends here -->
+
+             <!-- blog area start -->
+             
+            <!-- blog area end -->
+
+             <!-- brand area start -->
+             
+            <!-- brand area end -->
+    </main>
+</body>
+{% endblock body %}

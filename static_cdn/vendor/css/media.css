@@ -1,0 +1,38 @@
+@media screen and (max-width:600px){
+    .header-navbar{
+        position: relative;
+        top: -100px;
+        padding-bottom:0 !important;
+        
+    }
+   
+    .header-logo{
+        text-align: right;
+
+    }
+
+    .logo img{
+        position:relative;
+        left: -50px;
+        padding-bottom: 0 !important;
+    }
+
+    .header-top-nav{
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .navbar-nav li a{
+        background-color: #0c1923;
+        border:1px solid #f2f2f2 ;
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        font-size: 13px !important;
+         padding-left: 20px !important;
+         padding: 10px 10% ;
+    }
+    .navbar-nav li a:hover{
+        background: #253039;
+    }
+}
+
