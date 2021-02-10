@@ -166,4 +166,4 @@ EMAIL_HOST_USER = "perciouskid@gmail.com"
 EMAIL_HOST = 'smtp.googlemail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_PASSWORD = "'percious@kid"
+EMAIL_HOST_PASSWORD = "percious@stephanie"
